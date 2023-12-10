@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 import java.util.Optional;
+import java.util.UUID;
 
 @Service
 public class CustomerService {
@@ -22,22 +23,23 @@ public class CustomerService {
     @Autowired
     private ProductService productService;
 
-    public CustomerService(CustomerRepository repository){
+    public CustomerService(CustomerRepository repository) {
         this.repository = repository;
     }
 
-    //Adicionar
-    public Customer insert(Customer customer){
+    // Adicionar
+    public Customer insert(Customer customer) {
         Customer save = repository.save(customer);
         return save;
     }
-    //Consultar
-    public Customer findById(Long id){
+
+    // Consultar
+    public Customer findById(UUID id) {
         Optional<Customer> customer = repository.findById(id);
         return customer.orElse(null);
     }
 
-    public List<Customer> findAll(boolean isDeleted){
+    public List<Customer> findAll(boolean isDeleted) {
         Session session = entityManager.unwrap(Session.class);
         Filter filter = session.enableFilter("deletedCustomerFilter");
         filter.setParameter("isDeleted", isDeleted);
@@ -46,32 +48,32 @@ public class CustomerService {
         return customer;
     }
 
-    public Customer update(Long id, Customer customer){
+    public Customer update(UUID id, Customer customer) {
         Optional<Customer> optional = repository.findById(id);
-        if(optional.isPresent()){
+        if (optional.isPresent()) {
             Customer customerUpdated = optional.get();
             customerUpdated.setName(customer.getName());
             customerUpdated.setUser_shopping_cart(customer.getUser_shopping_cart());
             repository.save(customerUpdated);
             return customerUpdated;
-        }else{
+        } else {
             throw new RuntimeException("Não foi possível atualizar o registro");
         }
     }
 
-    //Remover
-    public void delete(Long id){
+    // Remover
+    public void delete(UUID id) {
         repository.deleteById(id);
     }
 
-    public void addProduct(Long idCustomer, Long idProduct){
+    public void addProduct(UUID idCustomer, UUID idProduct) {
         Optional<Customer> optional = repository.findById(idCustomer);
-        if(optional.isPresent()){
+        if (optional.isPresent()) {
             Customer customerUpdated = optional.get();
             Optional<Product> product = Optional.ofNullable(productService.findById(idProduct));
             product.ifPresent(value -> customerUpdated.getUser_shopping_cart().getProducts().add(value));
             update(idCustomer, customerUpdated);
-        }else{
+        } else {
             throw new RuntimeException("Não foi possível atualizar o registro");
         }
     }
