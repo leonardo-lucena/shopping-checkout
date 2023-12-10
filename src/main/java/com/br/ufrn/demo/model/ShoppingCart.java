@@ -35,8 +35,8 @@ public class ShoppingCart {
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
     List<Product> products;
 
-    private Float total_value;
-    private Float total_weight;
+    private float total_value;
+    private float total_weight;
     private float cartDiscount;
     private float shippingDiscount;
     private float finalValue;
