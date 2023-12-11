@@ -1,6 +1,5 @@
 package com.br.ufrn.demo.service;
 
-import com.br.ufrn.demo.model.Customer;
 import com.br.ufrn.demo.model.ShoppingCart;
 import com.br.ufrn.demo.repository.ShoppingCartRepository;
 import jakarta.persistence.EntityManager;
@@ -70,6 +69,8 @@ public class ShoppingCartService {
 
     public Float checkout(UUID id) {
         ShoppingCart shoppingCart = repository.findById(id).orElse(null);
+        shoppingCart.calculateCartDiscount();
+        shoppingCart.calculateShippingDiscount();
         shoppingCart.calculateFinalValue();
         Float total = shoppingCart.getFinalValue();
         repository.delete(shoppingCart);
