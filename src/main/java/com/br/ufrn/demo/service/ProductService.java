@@ -13,13 +13,19 @@ import java.util.UUID;
 
 @Service
 public class ProductService {
+    @Autowired
     ProductRepository repository;
 
     @Autowired
-    private EntityManager entityManager;
+    EntityManager entityManager;
 
-    public ProductService(ProductRepository repository) {
-        this.repository = repository;
+    public ProductService(ProductRepository productRepository, EntityManager entityManager) {
+        this.repository = productRepository;
+        this.entityManager = entityManager;
+    }
+
+    public ProductService(EntityManager entityManager) {
+        this.entityManager = entityManager;
     }
 
     public Product insert(Product product) {

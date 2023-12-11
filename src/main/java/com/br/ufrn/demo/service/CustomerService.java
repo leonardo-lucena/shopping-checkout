@@ -15,6 +15,7 @@ import java.util.UUID;
 
 @Service
 public class CustomerService {
+    @Autowired
     CustomerRepository repository;
 
     @Autowired
@@ -22,6 +23,11 @@ public class CustomerService {
 
     @Autowired
     private ProductService productService;
+
+    public CustomerService(EntityManager entityManager, CustomerRepository repository) {
+        this.entityManager = entityManager;
+        this.repository = repository;
+    }
 
     public CustomerService(CustomerRepository repository) {
         this.repository = repository;

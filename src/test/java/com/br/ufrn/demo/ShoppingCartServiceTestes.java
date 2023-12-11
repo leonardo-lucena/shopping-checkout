@@ -11,8 +11,13 @@ import org.junit.platform.suite.api.Suite;
                 ShoppingCartServiceTesteDoisProdutosApplicationTests.class,
                 ShoppingCartServiceTesteCincoProdutosApplicationTests.class,
                 ShoppingCartServiceTesteCincoProdutosComRepeticaoApplicationTests.class,
+                ShoppingCartServiceTesteSeisProdutosApplicationTests.class,
+                ShoppingCartServiceTesteSeisProdutosComRepeticaoApplicationTests.class,
                 ShoppingCartServiceTesteQuinzeProdutosApplicationTests.class,
                 ShoppingCartServiceTesteQuinzeProdutosComRepeticaoApplicationTests.class,
+                ShoppingCartServiceOutrosTestes.class,
+                CustomerServiceTest.class,
+                ProductServiceTest.class,
 
 })
 public class ShoppingCartServiceTestes {

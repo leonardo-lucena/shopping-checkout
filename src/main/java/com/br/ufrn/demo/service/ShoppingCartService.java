@@ -13,6 +13,7 @@ import java.util.UUID;
 
 @Service
 public class ShoppingCartService {
+    @Autowired
     ShoppingCartRepository repository;
 
     @Autowired
