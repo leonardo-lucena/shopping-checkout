@@ -27,7 +27,7 @@ public class Customer {
     private UUID id;
     private String name;
     @OneToOne
-    @JoinColumn(name = "id_shopping_cart")
+    @JoinColumn(name = "id_shopping_cart", nullable = false)
     private ShoppingCart user_shopping_cart;
 
     private Boolean deleted = Boolean.FALSE;

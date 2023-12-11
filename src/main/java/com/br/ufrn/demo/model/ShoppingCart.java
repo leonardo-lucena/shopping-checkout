@@ -10,9 +10,7 @@ import lombok.Setter;
 import org.hibernate.annotations.*;
 
 import java.util.Map;
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.UUID;
 
@@ -31,14 +29,14 @@ public class ShoppingCart {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     @OneToOne
-    @JoinColumn(name = "id_customer")
+    @JoinColumn(name = "id_customer", nullable = false)
     private Customer costumer;
 
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
     List<Product> products;
 
-    private Float total_value;
-    private Float total_weight;
+    private float total_value;
+    private float total_weight;
     private float cartDiscount;
     private float shippingDiscount;
     private float finalValue;
