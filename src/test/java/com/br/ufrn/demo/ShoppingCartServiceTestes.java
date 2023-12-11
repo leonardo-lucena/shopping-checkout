@@ -12,7 +12,7 @@ import org.junit.platform.suite.api.Suite;
                 ShoppingCartServiceTesteCincoProdutosApplicationTests.class,
                 ShoppingCartServiceTesteCincoProdutosComRepeticaoApplicationTests.class,
                 ShoppingCartServiceTesteQuinzeProdutosApplicationTests.class,
-                ShoppingCartServiceTesteCincoProdutosComRepeticaoApplicationTests.class,
+                ShoppingCartServiceTesteQuinzeProdutosComRepeticaoApplicationTests.class,
 
 })
 public class ShoppingCartServiceTestes {
