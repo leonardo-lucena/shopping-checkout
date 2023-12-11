@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class ShoppingCartService {
@@ -17,20 +18,20 @@ public class ShoppingCartService {
     @Autowired
     private EntityManager entityManager;
 
-    public ShoppingCartService(ShoppingCartRepository repository){
+    public ShoppingCartService(ShoppingCartRepository repository) {
         this.repository = repository;
     }
 
-    public ShoppingCart insert(ShoppingCart shoppingCart){
+    public ShoppingCart insert(ShoppingCart shoppingCart) {
         ShoppingCart save = repository.save(shoppingCart);
         return save;
     }
 
-    public ShoppingCart findById(Long id){
+    public ShoppingCart findById(UUID id) {
         return repository.findById(id).orElse(null);
     }
 
-    public List<ShoppingCart> findAll(boolean isDeleted){
+    public List<ShoppingCart> findAll(boolean isDeleted) {
         Session session = entityManager.unwrap(Session.class);
         Filter filter = session.enableFilter("deletedShoppingCartFilter");
         filter.setParameter("isDeleted", isDeleted);
@@ -39,41 +40,40 @@ public class ShoppingCartService {
         return shoppingCart;
     }
 
-    public ShoppingCart update(Long id, ShoppingCart shoppingCart){
+    public ShoppingCart update(UUID id, ShoppingCart shoppingCart) {
         ShoppingCart shoppingCartUpdated = repository.findById(id).orElse(null);
-        if(shoppingCartUpdated != null){
+        if (shoppingCartUpdated != null) {
             shoppingCartUpdated.setCostumer(shoppingCart.getCostumer());
             shoppingCartUpdated.setProducts(shoppingCart.getProducts());
             shoppingCartUpdated = updateTotals(shoppingCartUpdated);
             repository.save(shoppingCartUpdated);
             return shoppingCartUpdated;
-        }else{
+        } else {
             throw new RuntimeException("Não foi possível atualizar o registro");
         }
     }
 
-    public ShoppingCart updateTotals(ShoppingCart shoppingCart){
+    public ShoppingCart updateTotals(ShoppingCart shoppingCart) {
         shoppingCart.setTotal_value(0f);
         shoppingCart.setTotal_weight(0f);
-        for(var product : shoppingCart.getProducts()){
+        for (var product : shoppingCart.getProducts()) {
             shoppingCart.setTotal_value(shoppingCart.getTotal_value() + product.getValue());
             shoppingCart.setTotal_weight(shoppingCart.getTotal_weight() + product.getWeight());
         }
         return shoppingCart;
     }
 
-    public void delete(Long id){
+    public void delete(UUID id) {
         repository.deleteById(id);
     }
 
-    public Float checkout(Long id){
+    public Float checkout(UUID id) {
         ShoppingCart shoppingCart = repository.findById(id).orElse(null);
-        if(shoppingCart != null){
-            Float total = shoppingCart.getTotal_value();
-            repository.delete(shoppingCart);
-            return total;
-        }else{
-            throw new RuntimeException("Não foi possível realizar o checkout");
-        }
+        shoppingCart.calculateCartDiscount();
+        shoppingCart.calculateShippingDiscount();
+        shoppingCart.calculateFinalValue();
+        Float total = shoppingCart.getFinalValue();
+        repository.delete(shoppingCart);
+        return total;
     }
 }
