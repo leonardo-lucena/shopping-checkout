@@ -29,7 +29,7 @@ public class ShoppingCart {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     @OneToOne
-    @JoinColumn(name = "id_customer")
+    @JoinColumn(name = "id_customer", nullable = false)
     private Customer costumer;
 
     @OneToMany(mappedBy = "id", cascade = CascadeType.ALL)
