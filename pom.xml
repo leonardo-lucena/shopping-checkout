@@ -43,6 +43,44 @@
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 		</dependency>
+	    <!-- JUnit Jupiter (JUnit 5), API and TestEngine -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>5.7.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit Platform Runner for running JUnit 5 tests in JUnit 4 environment -->
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-runner</artifactId>
+        <version>1.7.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit Platform Suite API -->
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-suite-api</artifactId>
+        <version>1.7.0</version>
+        <scope>test</scope>
+    </dependency>
+
+    <!-- JUnit Platform Launcher for launching the testing platform -->
+    <dependency>
+        <groupId>org.junit.platform</groupId>
+        <artifactId>junit-platform-launcher</artifactId>
+        <version>1.7.0</version>
+        <scope>test</scope>
+    </dependency>
+	<dependency>
+    <groupId>org.junit.platform</groupId>
+    <artifactId>junit-platform-suite</artifactId>
+    <version>1.10.1</version>
+    <scope>test</scope>
+</dependency>
+
 	</dependencies>
 
 	<build>
