@@ -19,6 +19,8 @@ Este projeto inclui "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partiç�
 
 - [Partições e Limites (particoes-e-limites.pptx)](particoes-e-limites.pptx): Este arquivo de apresentação oferece insights visuais sobre os critérios de particionamento e limites adotados nos casos de teste.
 
+- OBS.: Para visualizar os arquivos pode-se clicar no link e na janela sequinte clicar em "View raw". Ao clicar no link o arquivo sera baixado para o PC.
+
 ## Projeto desenvolvido pelos residentes:
 * Ayslan Camara de Moura Silveira
 * Gabriel Lucas de Medeiros Leite
