@@ -1,6 +1,6 @@
 # Projeto Carrinho de Compras (shopping-checkout)
 
-## Este projeto implementa uma API REST construindo assim um módulo que simula um Carrinho de Compras. A API é desenvolvida usando Java com o framework Spring Boot e inclui as camadas de Controller, Service e Repository.
+#### Este projeto implementa uma API REST construindo assim um módulo que simula um Carrinho de Compras. A API é desenvolvida usando Java com o framework Spring Boot e inclui as camadas de Controller, Service e Repository.
 
 
 
