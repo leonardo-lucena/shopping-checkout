@@ -5,7 +5,7 @@
 
 
 ## Como Executar o Projeto
-Siga as etapas abaixo:
+#### Siga as etapas abaixo:
 
 ### Requisitos
 Certifique-se de ter o Java e o Maven instalados em seu computador.
