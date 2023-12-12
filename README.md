@@ -15,9 +15,12 @@ Certifique-se de ter o Java e o Maven instalados em seu computador.
 ## Arquivos complementares
 Este projeto inclui "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partições e Limites.pptx". Esses arquivos desempenharam um papel fundamental na criação e implementação deste repositório, proporcionando uma base sólida para a criação, execução e acompanhamento eficaz dos testes.
 
-__*Casos de Teste (Casos de Testes.xlsx):*__ Este arquivo fornece uma planilha estruturada contendo os casos de teste para o projeto. \n
-__*Tabela para Testes (TABELA PARA TESTES.xlsx):*__ Essa planilha serve como um recurso adicional para guiar a execução de testes no projeto. \n
-__*Partições e Limites (particoes e limites.pptx):*__ Este arquivo de apresentação oferece insights visuais sobre os critérios de particionamento e limites adotados nos casos de teste.\n
+__*Casos de Teste (Casos de Testes.xlsx):*__ Este arquivo fornece uma planilha estruturada contendo os casos de teste para o projeto.
+
+__*Tabela para Testes (TABELA PARA TESTES.xlsx):*__ Essa planilha serve como um recurso adicional para guiar a execução de testes no projeto.
+
+__*Partições e Limites (particoes e limites.pptx):*__ Este arquivo de apresentação oferece insights visuais sobre os critérios de particionamento e limites adotados nos casos de teste.
+
 
 Projeto desenvolvido pelos residentes:
 * Ayslan Camara de Moura Silveira
