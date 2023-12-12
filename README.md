@@ -22,7 +22,7 @@ __*Tabela para Testes (TABELA PARA TESTES.xlsx):*__ Essa planilha serve como um 
 __*Partições e Limites (particoes e limites.pptx):*__ Este arquivo de apresentação oferece insights visuais sobre os critérios de particionamento e limites adotados nos casos de teste.
 
 
-Projeto desenvolvido pelos residentes:
+## Projeto desenvolvido pelos residentes:
 * Ayslan Camara de Moura Silveira
 * Gabriel Lucas de Medeiros Leite
 * Leonardo Bandeira de Lucena
