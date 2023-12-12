@@ -15,7 +15,7 @@ Certifique-se de ter o Java e o Maven instalados em seu computador.
 5. Um arquivo na raiz do repositório será gerado. Nele, você poderá encontrar um arquivo HTML com os dados de cobertura dos testes. O arquivo terá o mesmo nome do projeto, mudando apenas a extensão para .html.
    
 ## Arquivos complementares
-Este projeto inclui os arquivos "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partições e Limites.pptx". Esses documentos desempenharam um papel fundamental na criação e implementação deste repositório, fornecendo uma base sólida para a elaboração, execução e eficaz acompanhamento dos testes.
+Este projeto inclui os arquivos "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partições e Limites.pptx". Esses documentos desempenharam um papel fundamental na criação e implementação deste repositório, fornecendo uma base sólida para a elaboração, execução e acompanhamento dos testes.
 
 - [Casos de Teste (Casos de Testes.xlsx)](TABELA-PARA-TESTES.xlsx): Este arquivo fornece uma planilha estruturada contendo os casos de teste para o projeto.
 
