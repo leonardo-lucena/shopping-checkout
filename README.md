@@ -9,7 +9,11 @@
 Certifique-se de ter o Java e o Maven instalados em seu computador.
 
 1. Clone o repositório usando o comando: ```git clone https://github.com/leonardo-lucena/shopping-checkout.git
-
+2. Abra o prompt de comandos no local corespondente ao repositório.
+3. Para iniciar o projeto use o comando ```mvn run
+4. Para execultar os teste use o comando ```mvn test
+5. Um arquivo na raiz do repositório sera gerado, nele poderá se encontrar um arquivo html com os dados de cobertura dos teste. O arquivo tera o mesmo nome do projeto, mudando apenas a extensão para .html
+   
 ## Arquivos complementares
 Este projeto inclui "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partições e Limites.pptx". Esses arquivos desempenharam um papel fundamental na criação e implementação deste repositório, proporcionando uma base sólida para a criação, execução e acompanhamento eficaz dos testes.
 
