@@ -8,7 +8,7 @@
 ### Requisitos
 Certifique-se de ter o Java e o Maven instalados em seu computador.
 
-1. Clone o repositório usando o comando: ```bash git clone https://github.com/leonardo-lucena/shopping-checkout.git
+1. Clone o repositório usando o comando: ```git clone https://github.com/leonardo-lucena/shopping-checkout.git
 
 ## Arquivos complementares
 Este projeto inclui "Casos de Teste.xlsx", "TABELA PARA TESTES.xlsx" e "Partições e Limites.pptx". Esses arquivos desempenharam um papel fundamental na criação e implementação deste repositório, proporcionando uma base sólida para a criação, execução e acompanhamento eficaz dos testes.
